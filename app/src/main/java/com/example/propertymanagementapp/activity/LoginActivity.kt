@@ -1,5 +1,6 @@
 package com.example.propertymanagementapp.activity
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +19,8 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        startActivity(Intent(baseContext,HomeActivity::class.java))//for testing
     }
 
 }

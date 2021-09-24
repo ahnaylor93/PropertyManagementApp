@@ -6,4 +6,109 @@
     android:layout_height="match_parent"
     tools:context=".activity.HomeActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgournd_ultra_light_blue"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <Button
+                android:id="@+id/btn_Alerts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/ic_alert"
+                android:text="@string/alerts"
+                android:textAllCaps="false"
+                android:textColor="@color/icon_blue"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/btn_properties"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_properties"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/ic_properties"
+                android:text="@string/properties"
+                android:textAllCaps="false"
+                android:textColor="@color/icon_blue"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/btn_tenants"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_Alerts"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_tenants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/ic_tenants"
+                android:text="@string/tenants"
+                android:textAllCaps="false"
+                android:textColor="@color/icon_blue"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_properties"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/btn_transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/ic_transaction"
+                android:text="@string/transaction"
+                android:textAllCaps="false"
+                android:textColor="@color/icon_blue"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/btn_properties"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_Alerts" />
+
+            <Button
+                android:id="@+id/btn_collectRent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/ic_collect_rent"
+                android:text="@string/collectRent"
+                android:textAllCaps="false"
+                android:textColor="@color/icon_blue"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/btn_tenants"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_Alerts"
+                app:layout_constraintTop_toBottomOf="@id/btn_Alerts" />
+
+            <Button
+                android:id="@+id/btn_ToDo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/ic_to_do"
+                android:text="@string/ToDo"
+                android:textAllCaps="false"
+                android:textColor="@color/icon_blue"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_properties"
+                app:layout_constraintTop_toBottomOf="@id/btn_Alerts" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
