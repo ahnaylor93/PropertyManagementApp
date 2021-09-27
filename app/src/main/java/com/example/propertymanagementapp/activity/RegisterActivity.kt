@@ -1,24 +1,80 @@
 package com.example.propertymanagementapp.activity
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+import android.util.Log
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.lifecycle.ViewModelProvider
 import com.example.propertymanagementapp.R
+import com.example.propertymanagementapp.api.ApiClient
+import com.example.propertymanagementapp.api.ApiService
+import com.example.propertymanagementapp.api.request.RegisterRequestData
+import com.example.propertymanagementapp.api.response.RegisterResponseData
 import com.example.propertymanagementapp.databinding.ActivityRegisterBinding
+import com.example.propertymanagementapp.viewmodel.RegisterViewModel
+import retrofit2.Call
+import retrofit2.Retrofit
+import java.text.SimpleDateFormat
+import java.util.*
 
 class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityRegisterBinding
+    lateinit var binding: ActivityRegisterBinding
+    lateinit var viewModel: RegisterViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        initViewModel()
+        setupEvents()
+
+        setupObservers()
+    }
+
+    private fun setupObservers() {
+
+        viewModel.registerResponse.observe(this) {
+
+            it.token?.let {
+                Toast.makeText(baseContext, "Registration successful", Toast.LENGTH_LONG).show()
+            }
+
+            it.error?.let {
+                    hasError ->
+                if(hasError) {
+                    it?.message?.let {
+                            msg ->
+                        Toast.makeText(baseContext, msg, Toast.LENGTH_LONG).show()
+                    }
+                }
+            }
         }
+
+        viewModel.error.observe(this) {
+            Toast.makeText(baseContext, it, Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun setupEvents() {
+
+        binding.btnRegister.setOnClickListener {
+            val email = binding.etEmail.text.toString()
+            val password = binding.etPassword.text.toString()
+            val name = binding.etName.text.toString()
+            val type = "landlord"
+
+            val date = Calendar.getInstance().time
+            val formatter = SimpleDateFormat.getDateTimeInstance()
+            val createdAt = formatter.format(date)
+
+            viewModel.register(email, password, name, type, createdAt)
+        }
+    }
+
+    fun initViewModel() {
+        viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
+    }
     }

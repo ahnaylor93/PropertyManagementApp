@@ -16,7 +16,16 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        startActivity(Intent(baseContext, LoginRegisterChoiceActivity::class.java))
+        handler.sendEmptyMessageDelayed(LAUNCH_LOGIN_SCREEN,2000)
     }
-
+    private val LAUNCH_LOGIN_SCREEN:Int = 200
+    private val handler = object: Handler(){
+        override fun handleMessage(msg: Message) {
+            super.handleMessage(msg)
+            if(msg.what == LAUNCH_LOGIN_SCREEN){
+                startActivity(Intent(baseContext, LoginRegisterChoiceActivity::class.java))
+                finish()
+            }
+        }
+    }
 }
