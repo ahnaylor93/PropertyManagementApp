@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PropertyManagementApp">
         <activity
+            android:name=".activity.PropertyScreenActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity.HomeActivity"
             android:exported="true" />
         <activity
