@@ -21,5 +21,12 @@ class LoginRegisterChoiceActivity : AppCompatActivity() {
         binding.btnRegister.setOnClickListener{
             startActivity(Intent(baseContext, RegisterActivity::class.java))
         }
+
+        val sharedPref = getSharedPreferences("app_settings",
+            AppCompatActivity.MODE_PRIVATE
+        )
+        sharedPref.getString("userId",null)?.let {
+            startActivity(Intent(baseContext, HomeActivity::class.java))
+        }
     }
 }
