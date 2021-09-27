@@ -82,4 +82,5 @@ class LoginActivity : AppCompatActivity() {
     fun initViewModel() {
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
     }
+
 }

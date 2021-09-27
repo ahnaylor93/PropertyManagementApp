@@ -61,20 +61,49 @@ class RegisterActivity : AppCompatActivity() {
     private fun setupEvents() {
 
         binding.btnRegister.setOnClickListener {
-            val email = binding.etEmail.text.toString()
-            val password = binding.etPassword.text.toString()
-            val name = binding.etName.text.toString()
-            val type = "landlord"
+            if(validateInput()) {
+                val email = binding.etEmail.text.toString()
+                val password = binding.etPassword.text.toString()
+                val name = binding.etName.text.toString()
+                val type = "landlord"
 
-            val date = Calendar.getInstance().time
-            val formatter = SimpleDateFormat.getDateTimeInstance()
-            val createdAt = formatter.format(date)
+                val date = Calendar.getInstance().time
+                val formatter = SimpleDateFormat.getDateTimeInstance()
+                val createdAt = formatter.format(date)
 
-            viewModel.register(email, password, name, type, createdAt)
+                viewModel.register(email, password, name, type, createdAt)
+            }
         }
     }
 
     fun initViewModel() {
         viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
     }
+
+    fun validateInput(): Boolean{
+        var valid = true
+
+        if(binding.etName.text.toString().trim() == ""){
+            Toast.makeText(baseContext, "The Name field can not be empty.", Toast.LENGTH_LONG).show()
+            valid = false
+        }
+        if(binding.etEmail.text.toString().trim() == ""){
+            Toast.makeText(baseContext, "The Email field can not be empty.", Toast.LENGTH_LONG).show()
+            valid = false
+        }
+        if(binding.etPassword.text.toString().trim() == ""){
+            Toast.makeText(baseContext, "The Password field can not be empty.", Toast.LENGTH_LONG).show()
+            valid = false
+        }
+        if(binding.etPassword.text.toString().trim().length < 6){
+            Toast.makeText(baseContext, "Your password must be at least six characters long.", Toast.LENGTH_LONG).show()
+            valid = false
+        }
+        if(binding.etPassword.text.toString() != binding.etConfirmPassword.text.toString()){
+            Toast.makeText(baseContext, "Password and Confirm Password must match.", Toast.LENGTH_LONG).show()
+            valid = false
+        }
+        return valid
     }
+
+}
