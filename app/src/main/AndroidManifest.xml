@@ -3,6 +3,7 @@
     package="com.example.propertymanagementapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+     <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PropertyManagementApp">
+        <activity
+            android:name=".activity.ToDoListScreenActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.CollectRentScreenActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.TransactionsScreenActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.TenantsScreenActivity"
+            android:exported="true" />
         <activity
             android:name=".activity.PropertyScreenActivity"
             android:exported="true" />

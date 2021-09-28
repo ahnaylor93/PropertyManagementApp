@@ -16,5 +16,9 @@
     <string name="hint_password">Password</string>
     <string name="hint_confirm_password">Confirm Password</string>
     <string name="hint_name">Name</string>
+    <string name="add_to_do">Add To-Do</string>
+    <string name="due_day">Due day:</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
     >>>>>>> master
 </resources>

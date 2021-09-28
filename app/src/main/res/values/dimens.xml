@@ -5,4 +5,7 @@
     <dimen name="margin_small">8dp</dimen>
 
     <dimen name="padding_common">16dp</dimen>
+    <dimen name="common_margin">15dp</dimen>
+    <dimen name="common_padding">18dp</dimen>
+    <dimen name="small_margin">10dp</dimen>
 </resources>

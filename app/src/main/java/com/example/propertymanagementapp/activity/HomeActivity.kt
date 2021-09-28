@@ -24,5 +24,17 @@ class HomeActivity : AppCompatActivity() {
         binding.btnProperties.setOnClickListener(){
             startActivity(Intent(baseContext,PropertyScreenActivity::class.java))
         }
+        binding.btnTenants.setOnClickListener(){
+            startActivity(Intent(baseContext,TenantsScreenActivity::class.java))
+        }
+        binding.btnTransaction.setOnClickListener(){
+            startActivity(Intent(baseContext,TransactionsScreenActivity::class.java))
+        }
+        binding.btnCollectRent.setOnClickListener(){
+            startActivity(Intent(baseContext,CollectRentScreenActivity::class.java))
+        }
+        binding.btnToDo.setOnClickListener(){
+            startActivity(Intent(baseContext,ToDoListScreenActivity::class.java))
+        }
     }
 }
