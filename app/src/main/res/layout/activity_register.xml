@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.example.propertymanagementapp.viewmodel.RegisterViewModel" />
+    </data>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/padding_common"
     tools:context=".activity.RegisterActivity">
 
     <EditText
         android:id="@+id/etName"
+        android:text="@={viewModel.name}"
+        error_text="@{viewModel.nameError}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_name"
@@ -16,6 +26,8 @@
         app:layout_constraintTop_toTopOf="parent"/>
     <EditText
         android:id="@+id/etEmail"
+        android:text="@={viewModel.email}"
+        error_text="@{viewModel.emailError}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_email"
@@ -24,6 +36,8 @@
         app:layout_constraintTop_toBottomOf="@id/etName"/>
     <EditText
         android:id="@+id/etPassword"
+        android:text="@={viewModel.password}"
+        error_text="@{viewModel.passwordError}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
@@ -33,6 +47,8 @@
         app:layout_constraintTop_toBottomOf="@id/etEmail"/>
     <EditText
         android:id="@+id/etConfirmPassword"
+        android:text="@={viewModel.confirmPassword}"
+        error_text="@{viewModel.confirmPasswordError}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
@@ -42,11 +58,22 @@
         app:layout_constraintTop_toBottomOf="@id/etPassword"/>
     <Button
         android:id="@+id/btnRegister"
+        android:onClick="@{() -> viewModel.register()}"
+        android:text="@string/btn_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/btn_register"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etConfirmPassword"/>
+    <ProgressBar
+        android:visibility='@{viewModel.processing? View.VISIBLE : View.GONE}'
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnRegister"
+        android:layout_marginTop="@dimen/margin_large"
+        android:id="@+id/pb_processing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
