@@ -56,6 +56,7 @@ class ToDoListScreenActivity : AppCompatActivity() {
     }
     fun loadAddToDoFragment(){
         val addToDoFragment = AddToDoFragment()
+
         supportFragmentManager.beginTransaction()
             .add(R.id.todo_container, addToDoFragment)
             .addToBackStack("AddToDoFragment")
