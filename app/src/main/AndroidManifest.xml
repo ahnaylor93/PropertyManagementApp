@@ -12,8 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PropertyManagementApp">
         <activity
+            android:name=".activity.PropertyActivity"
+            android:exported="true"
+            android:theme="@style/Theme.PropertyManagementApp.NoActionBar"/>
+        <activity
             android:name=".activity.HomeActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.PropertyManagementApp"/>
         <activity
             android:name=".activity.RegisterActivity"
             android:exported="true"
