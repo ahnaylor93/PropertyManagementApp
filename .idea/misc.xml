@@ -16,8 +16,9 @@
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_home.xml" value="0.2074074074074074" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_login.xml" value="0.2074074074074074" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_main.xml" value="0.19166666666666668" />
-        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_to_do_list_screen.xml" value="0.5541666666666667" />
-        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/view_holder_todo.xml" value="0.1935185185185185" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_to_do_list_screen.xml" value="0.362962962962963" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/fragment_add_todo.xml" value="0.22" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/view_holder_todo.xml" value="0.16666666666666666" />
       </map>
     </option>
   </component>
