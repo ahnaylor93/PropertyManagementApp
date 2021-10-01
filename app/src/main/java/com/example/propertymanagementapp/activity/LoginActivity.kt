@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.propertymanagementapp.R
 import com.example.propertymanagementapp.databinding.ActivityLoginBinding
@@ -19,23 +20,13 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        initViewModel()
-        setupEvents()
-
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
+        binding.viewModel = viewModel
         setupObservers()
     }
 
     private fun setupObservers() {
-        viewModel.processing.observe(this) {
-            if(it == true) {
-                binding.pbProcessing.visibility = View.VISIBLE
-            } else {
-                binding.pbProcessing.visibility = View.GONE
-            }
-        }
 
         viewModel.loginResponse.observe(this) { response ->
 
@@ -73,19 +64,4 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(baseContext, it, Toast.LENGTH_LONG).show()
         }
     }
-
-    private fun setupEvents() {
-
-        binding.btnLogin.setOnClickListener {
-            val email = binding.etEmail.text.toString()
-            val password = binding.etPassword.text.toString()
-
-            viewModel.login(email, password)
-        }
-    }
-
-    fun initViewModel() {
-        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
-    }
-
 }
