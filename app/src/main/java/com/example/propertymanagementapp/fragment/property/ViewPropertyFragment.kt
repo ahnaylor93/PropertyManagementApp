@@ -38,6 +38,7 @@ class ViewPropertyFragment : Fragment() {
             )
             setHasOptionsMenu(true)
             binding.rvProperties.layoutManager = LinearLayoutManager(this.context)
+            viewModel.loadProperties()
             return binding.root
         } catch (e: Exception) {
             Log.d("FRAGMENT ERROR", e.message ?: "UNKNOWN")
