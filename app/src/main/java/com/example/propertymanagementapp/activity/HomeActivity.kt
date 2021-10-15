@@ -22,7 +22,7 @@ class HomeActivity : AppCompatActivity() {
 
         }
         binding.btnProperties.setOnClickListener(){
-            startActivity(Intent(baseContext,PropertyScreenActivity::class.java))
+            startActivity(Intent(baseContext,PropertyActivity::class.java))
         }
         binding.btnTenants.setOnClickListener(){
             startActivity(Intent(baseContext,TenantsScreenActivity::class.java))

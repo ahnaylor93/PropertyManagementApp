@@ -17,6 +17,7 @@
     <style name="Theme.PropertyManagementApp.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorButtonNormal"> @color/icon_blue</item>
     </style>
 
     <style name="Theme.PropertyManagementApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

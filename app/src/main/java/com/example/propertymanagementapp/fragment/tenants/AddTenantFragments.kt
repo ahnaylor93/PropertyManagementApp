@@ -1,4 +1,6 @@
 package com.example.propertymanagementapp.fragment.tenants
 
-class AddTenantFragments {
+import androidx.fragment.app.Fragment
+
+class AddTenantFragments:Fragment() {
 }

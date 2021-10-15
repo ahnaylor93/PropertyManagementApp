@@ -14,7 +14,8 @@
         android:theme="@style/Theme.PropertyManagementApp">
         <activity
             android:name=".activity.ToDoListScreenActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.PropertyManagementApp.NoActionBar"/>
         <activity
             android:name=".activity.CollectRentScreenActivity"
             android:exported="true" />
@@ -23,7 +24,8 @@
             android:exported="true" />
         <activity
             android:name=".activity.TenantsScreenActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.PropertyManagementApp.NoActionBar"/>
         <activity
             android:name=".activity.PropertyActivity"
             android:exported="true"

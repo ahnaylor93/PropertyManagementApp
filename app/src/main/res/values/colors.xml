@@ -12,4 +12,5 @@
     <color name="backgournd_light_blue">#D4FAFF</color>
     <color name="backgournd_mid_blue">#578FFF</color>
     <color name="icon_blue">#2F69C7</color>
+    <color name="button_blue">#588FFB</color>
 </resources>

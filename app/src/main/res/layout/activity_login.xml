@@ -20,14 +20,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintGuide_percent=".4"
         android:orientation="horizontal"/>
-    <ProgressBar
-        android:visibility="gone"
-        android:id="@+id/pb_processing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/etEmail"/>
 
     <EditText
         android:id="@+id/etEmail"

@@ -1,4 +1,6 @@
 package com.example.propertymanagementapp.fragment.tenants
 
-class ContactTenantsFragment {
+import androidx.fragment.app.Fragment
+
+class ContactTenantsFragment:Fragment() {
 }

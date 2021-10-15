@@ -18,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/add_to_do"
+            android:textColor="@color/white"
             android:textAllCaps="false"
             android:id="@+id/btn_add_todo"
             app:layout_constraintTop_toTopOf="parent"
