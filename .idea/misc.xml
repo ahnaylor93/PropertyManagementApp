@@ -11,21 +11,30 @@
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2351851851851852" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/drawable/et_logo_backgound.xml" value="0.23425925925925925" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/drawable/ic_app_logo.xml" value="0.23425925925925925" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/drawable/ic_house.xml" value="0.33645833333333336" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.23425925925925925" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/drawable/ic_logo.xml" value="0.23425925925925925" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/drawable/ic_tenants.xml" value="0.4166666666666667" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_collect_rent_screen.xml" value="0.33229166666666665" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_home.xml" value="0.2074074074074074" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_login.xml" value="0.2074074074074074" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_login_register_choice.xml" value="0.33229166666666665" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_main.xml" value="0.19166666666666668" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_property.xml" value="0.3307291666666667" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_property_screen.xml" value="0.3307291666666667" />
-        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_tenants_screen.xml" value="0.21784420289855072" />
-        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_to_do_list_screen.xml" value="0.362962962962963" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_register.xml" value="0.3203125" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_tenants_screen.xml" value="0.1" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/activity_to_do_list_screen.xml" value="0.22598870056497175" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/fragment_add_property.xml" value="0.1" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/fragment_add_tenant.xml" value="0.21784420289855072" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/fragment_add_todo.xml" value="0.22" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/fragment_contact_tetants.xml" value="0.5541666666666667" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/fragment_register_landlord.xml" value="0.33229166666666665" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/fragment_register_tenant.xml" value="0.15780141843971632" />
-        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/fragment_view_properties.xml" value="0.21784420289855072" />
-        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/holder_property.xml" value="0.32083333333333336" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/fragment_select_property.xml" value="0.160081053698075" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/fragment_view_properties.xml" value="0.1" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/holder_property.xml" value="0.24316109422492402" />
+        <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/holder_tenant.xml" value="0.5541666666666667" />
         <entry key="..\:/Documents/AndroidStudioProjects/PropertyManagementApp/app/src/main/res/layout/view_holder_todo.xml" value="0.16666666666666666" />
       </map>
     </option>

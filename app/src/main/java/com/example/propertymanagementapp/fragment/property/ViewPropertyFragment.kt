@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
@@ -27,7 +28,8 @@ class ViewPropertyFragment : Fragment() {
     ): View? {
         val factory = GetPropertiesViewModelFactory(ApiClient.apiService)
         viewModel = ViewModelProvider(this, factory).get(GetPropertiesViewModel::class.java)
-
+        val userId=this.activity?.getSharedPreferences("app_settings",
+            AppCompatActivity.MODE_PRIVATE)?.getString("userId",null)
         try {
             //binding = FragmentViewPropertiesBinding.inflate(layoutInflater, container, false)
             val binding = DataBindingUtil.inflate<FragmentViewPropertiesBinding>(
@@ -38,6 +40,11 @@ class ViewPropertyFragment : Fragment() {
             )
             setHasOptionsMenu(true)
             binding.rvProperties.layoutManager = LinearLayoutManager(this.context)
+            binding.viewModel = viewModel
+            if (userId != null) {
+                viewModel.loadPropertiesByUser(userId)
+            }
+            //viewModel.loadProperties()
             return binding.root
         } catch (e: Exception) {
             Log.d("FRAGMENT ERROR", e.message ?: "UNKNOWN")

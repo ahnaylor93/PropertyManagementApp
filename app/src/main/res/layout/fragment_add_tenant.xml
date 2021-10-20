@@ -1,10 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="@dimen/common_padding"
-    >
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.example.propertymanagementapp.viewmodel.AddTenantViewModel" />
+    </data>
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/common_padding">
+
+        <EditText
+            android:text="@{viewModel.name}"
+            error_text="@{viewModel.nameError}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_name"
+            android:hint="@string/hint_name" />
+
+        <EditText
+            android:text="@{viewModel.email}"
+            error_text="@{viewModel.emailError}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_email"
+            android:hint="@string/hint_email" />
+
+        <Button
+            android:onClick="@{() -> viewModel.addTenant()}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_add"
+            android:textColor="@color/white"
+            android:text="@string/add" />
+
+        <ProgressBar
+            android:visibility='@{viewModel.processing==true? View.VISIBLE : View.GONE}'
+            android:id="@+id/pb_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</layout>

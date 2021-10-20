@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.example.propertymanagementapp.viewmodel.GetPropertiesViewModel" />
+        <variable
+            name="selectfragment"
+            type="com.example.propertymanagementapp.fragment.tenants.SelectPropertyFragment" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/small_margin"
+        android:padding="@dimen/small_padding">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_layout"
+            android:padding="@dimen/common_padding">
+
+            <androidx.recyclerview.widget.RecyclerView
+                properties="@{viewModel.properties}"
+                fragment ="@{selectfragment}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rv_property" />
+
+
+        </RelativeLayout>
+        <ProgressBar
+            android:visibility='@{viewModel.loading==true? View.VISIBLE : View.GONE}'
+            android:id="@+id/pb_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

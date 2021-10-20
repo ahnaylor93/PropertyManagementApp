@@ -13,10 +13,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_padding"
+        android:layout_margin="@dimen/small_margin">
     <ImageView
-        place_holder="@{@drawable/ic_house}"
+        place_holder="@drawable/ic_default_no_image"
         remote_source="@{property.image}"
+        android:src="@drawable/ic_default_no_image"
         android:id="@+id/ivImage"
         android:scaleType="fitXY"
         app:layout_constraintTop_toTopOf="parent"
@@ -54,7 +57,7 @@
             android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/tvPurchasePrice"
-        android:text="@{LoginBindingAdapter.convertDoubleToString(property.purchasePrice)}"
+        android:text="@{property.purchasePrice}"
         app:layout_constraintTop_toBottomOf="@id/tvLongitude"
         app:layout_constraintStart_toEndOf="@id/ivImage"
         app:layout_constraintEnd_toEndOf="parent"

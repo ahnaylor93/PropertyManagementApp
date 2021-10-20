@@ -2,6 +2,7 @@ package com.example.propertymanagementapp.api
 
 import okhttp3.OkHttp
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -11,9 +12,14 @@ object ApiClient {
 
     fun getRetrofit(): Retrofit{
         if(!this::myRetrofit.isInitialized){
+            val loggingInterceptor = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
+            val okHttpClient = OkHttpClient.Builder()
+                .addInterceptor(loggingInterceptor)
+                .build()
             myRetrofit = Retrofit.Builder()
                 .baseUrl("https://apolis-property-management.herokuapp.com/api/")
                 .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClient)
                 .build()
         }
         return myRetrofit

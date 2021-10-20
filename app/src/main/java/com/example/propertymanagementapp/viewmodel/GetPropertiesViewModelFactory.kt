@@ -9,3 +9,8 @@ class GetPropertiesViewModelFactory(val apiService: ApiService): ViewModelProvid
         return GetPropertiesViewModel(apiService) as T
     }
 }
+class GetTenantsViewModelFactory(val apiService: ApiService): ViewModelProvider.NewInstanceFactory() {
+    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+        return GetTenantsViewModel(apiService) as T
+    }
+}
